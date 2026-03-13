@@ -3,7 +3,7 @@
 # Maintianer: Aaron Bassett <abassett@qnx.com>
 pkgname=dav1d
 pkgver=1.5.1
-pkgrel=0
+pkgrel=${pkgrel:-0}
 pkgdesc="small and fast AV1 Decoder"
 url="https://code.videolan.org/videolan/dav1d"
 arch="all"
@@ -40,6 +40,7 @@ package() {
 }
 
 
+options="$options ${DISABLE_CHECK:+!check}"
 sha512sums="
 43319d75c173003337bb3e0b4ffe1b0b544bfe882dd51097d7634168ee94c0d316a1c04e4f101057ff4629117dde8f22362df1a49d6a058ba510c3e648a437a3  dav1d-1.5.1.tar.bz2
 "
